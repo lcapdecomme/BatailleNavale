@@ -1,11 +1,13 @@
-test-canvas-HTML5
+battle-canvas-HTML5
 =================
 
-** Test du canvas HTML5 **
-
-DrawImage du contexte du canvas pour charger une image
-
-SetInterval pour gérer le délai de l'animation
-
-Utilisation de 12 images du personnage [La Linéa](http://fr.wikipedia.org/wiki/La_Linea)
+** Test Fonctions Javascript & JQuery : Jeu de la bataille navale **
+Génération dynamique d'un tableau de X fois X cellules
+Positionnement aléatoire des bateaux
+* 1 porte-avion : 5 cases
+* 1 croiseur    : 4 cases
+* 2 sous-marins : 3 cases
+* 1 torpilleur  : 2 cases
+Click sur les cellules pour faire appaitre la bonne image.
+Nombre de coups, de bateaux restants, temps écoulés depuis le début de la partie.
 
