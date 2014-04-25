@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bataille navale</title>
+	<meta charset="utf-8">
+	<script src="jquery-2.1.0.js"></script> 
+	<script src="battle.js"></script>
+	<style>
+	* {
+		box-sizing: border-box;
+	}
+	.bouton {
+	    background: none repeat scroll 0 0 #30416A;
+	    border: 1px solid #3866A3;
+	    border-radius: 8px 8px 8px 8px;
+	    color: #FFFFFF;
+	    line-height: 50px;
+	    margin: 10px;
+	    text-align: center;
+	    text-decoration: none;
+	    padding-left: 14px;
+    	padding-right: 14px;
+	}
+	.bouton:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #44598a), color-stop(1, #30416a) );
+		background:-moz-linear-gradient( center top, #44598a 5%, #30416a 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44598a', endColorstr='#30416a');
+		background-color:#44598a;
+	}
+	.bouton:active {
+		position:relative;
+		top: 1px;
+	}
+	#battle, #messages {
+		float:left;
+		margin-top:30px;
+	}
+	#messages {
+		border: 1px solid #0000FF;
+		display: block;
+		height: 400px;
+		margin-right: 10px;
+		margin-left: 20px;
+		width: 150px;
+		overflow-y: scroll;
+	}
+	#messages p {
+		margin:0;
+		font-style: 'Courier New';
+		font-size: 12px;
+	}
+	#messages p:last-child {
+		margin-bottom: 5px;
+	}
+	#battle tr td {
+		width:20px;
+		height: 20px;
+		border:1px solid #B7B7B7;
+		background-image: url(img/eau.png);
+		background-repeat: no-repeat;
+		padding: 0;
+	}
+	.ok {
+		background-color: #9DE08D;
+	}
+	.ko {
+		background-color: #FF6B6B;
+	}
+	#jeu {
+    border: 1px solid #30416A;
+    display: block;
+    height: 580px;
+    width: 700px;
+	}
+	#info {
+		width:500px;
+		margin: 15px 15px 15px 90px;
+	}
+	#info input {
+		width:50px;
+	}
+	body p, body ul, body div  {
+		margin:2px;
+		}	</style>
+	</head>
+	<body>
+		<p>Test Fonctions Javascript & JQuery : Jeu de la bataille navale</p>
+		<p>Génération dynamique d'un tableau de X fois X cellules</p>
+		<p>Positionnement aléatoire des bateaux
+			<ul>
+				<li>1 porte-avion : 5 cases</li>
+				<li>1 croiseur    : 4 cases</li>
+				<li>2 sous-marin  : 3 cases</li>
+				<li>1 torpilleur  : 2 cases</li>
+			</ul>
+		</p>
+		<p>Click sur les cellules pour faire appaitre la bonne image.</p>
+		<p>Nombre de coups, de bateaux restants, temps écoulés depuis le début de la partie</p>
+		<div>
+			<label for="nbCasesX">Nombre de case à générer (10-20) : </label>
+			<input type="texte" id="nbCasesX" value="10" class="ok"/>
+			<a href="#" class="bouton" id="boutonGenerate">Nouvelle Partie</a>
+			<a href="#" class="bouton" id="boutonVoir">Voir la solution</a>
+		</div>
+		<div id="jeu">
+			<div id="info">
+				<label for="nbCoups">Nb coups : </label>
+				<input type="texte" id="nbCoups" value="" disabled />
+				<label for="nbBateaux">Nb bateaux restants : </label>
+				<input type="texte" id="nbBateaux" value="" disabled />
+				<label for="temps">Temps : </label>
+				<input type="texte" id="temps" value="" disabled />
+			</div>
+			<div id="messages"></div>
+			<table id="battle"></table>
+		</div>
+	</body>
+</html>
