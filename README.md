@@ -16,4 +16,4 @@ Click sur les cellules pour faire appaitre la bonne image.
 
 Nombre de coups, de bateaux restants, temps écoulés depuis le début de la partie.
 
-Démonstration [http://lcapdecomme.github.io/BatailleNavale/](http://http://lcapdecomme.github.io/BatailleNavale/).
+Démonstration sur [lcapdecomme.github.io/BatailleNavale/](http://lcapdecomme.github.io/BatailleNavale/).
